@@ -1,0 +1,35 @@
+﻿@model DispatchLogger.Models.CallLog
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CallLog</legend>
+
+    <div class="display-label">PatientPhone</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PatientPhone)
+    </div>
+
+    <div class="display-label">ReasonForCall</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ReasonForCall)
+    </div>
+
+    <div class="display-label">CallResolution</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CallResolution)
+    </div>
+
+    <div class="display-label">TimeStamp</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TimeStamp)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
